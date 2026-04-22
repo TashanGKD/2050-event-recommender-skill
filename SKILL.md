@@ -1,6 +1,6 @@
 ---
 name: 2050-event-recommender
-description: Recommend 2050@2026 activities for a person based on their tags, availability, collaboration intent, and the latest 2050 public information. Use when the user asks to follow the 2050 public account, digest 2050KnowledgeBase / WeChat articles, register or tag a participant through Tashan World, or suggest which 2050 forums, hackathons, camps, stages, meetups, and AI discussions they should join.
+description: Recommend 2050@2026 activities for a person based on their tags, availability, collaboration intent, and the latest 2050 public information. Use when the user asks to follow the 2050 public account, digest 2050KnowledgeBase / WeChat articles, register or tag a participant through Tashan World, or suggest which 2050 forums, hackathons, camps, stages, meetups, and topic discussions they should join.
 ---
 
 # 2050 Event Recommender
@@ -22,7 +22,7 @@ Collect only the fields needed for matching:
 - identity: student, developer, researcher, maker, educator, investor, organizer, creator, medical/health, hardware, robotics, design, media, community.
 - interests: AI agents, AI education, digital twin, robotics, chips, rare disease, village/future city, maker/hackathon, youth stage, camping, running, food, travel, games, podcasts, social meetups.
 - schedule: 2026-04-24, 2026-04-25, 2026-04-26, morning, afternoon, evening, all-day.
-- participation mode: learn, share, demo, recruit teammates, find collaborators, volunteer, relax, family/youth, AI-assisted discussion.
+- participation mode: learn, share, demo, recruit teammates, find collaborators, volunteer, relax, family/youth, guided topic filtering.
 - constraints: ticket/pass state, travel, food, accessibility, budget, energy level, language, group size.
 
 Do not over-ask. If fields are missing, infer from the conversation and state assumptions.
@@ -63,7 +63,7 @@ When using live research, include the article title, publish date, URL, and whet
 - Hardware, chips, robotics: prioritize AI chips, robot talk show, medical robot, mobile base hackathon, quantum computing, and future playground sessions.
 - Community/connectors: prioritize rainforest, new-student forum, future village, youth meetups, city scene labs, Zhejiang University/X-Lab, OPC, and social dinners.
 - Lightweight first-time visitors: prioritize 2050 overview, three-day activity summary, traffic/dining guide, pass guide, future playground, youth stage, camping, morning run, food exchange, and evening gathering.
-- People who want AI-assisted participation: recommend a path that includes "recommended AI participation", AI discussions, and a human-readable summary section.
+- People who want help filtering a dense schedule: recommend a human participation route, then use AI only to narrow choices, compare evidence, and reduce missed information.
 
 ## Output Shape
 
@@ -81,7 +81,7 @@ Use concise Chinese by default:
 可选：
 - ...
 
-AI 参与路线：
+参与路线：
 - ...
 
 需要补查：
